@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07627E9716DA04290090C98E /* ZiggSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07627E9616DA04290090C98E /* ZiggSongController.m */; };
+		07B7A03216D78692001CCACF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B7A03116D78692001CCACF /* UIKit.framework */; };
+		07B7A03416D78692001CCACF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B7A03316D78692001CCACF /* Foundation.framework */; };
+		07B7A03616D78692001CCACF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B7A03516D78692001CCACF /* CoreGraphics.framework */; };
+		07B7A03C16D78692001CCACF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07B7A03A16D78692001CCACF /* InfoPlist.strings */; };
+		07B7A03E16D78692001CCACF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B7A03D16D78692001CCACF /* main.m */; };
+		07B7A04216D78692001CCACF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B7A04116D78692001CCACF /* AppDelegate.m */; };
+		07B7A04416D78692001CCACF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B7A04316D78692001CCACF /* Default.png */; };
+		07B7A04616D78692001CCACF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B7A04516D78692001CCACF /* Default@2x.png */; };
+		07B7A04816D78692001CCACF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B7A04716D78692001CCACF /* Default-568h@2x.png */; };
+		07B7A04B16D78692001CCACF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B7A04A16D78692001CCACF /* ViewController.m */; };
+		07B7A04E16D78692001CCACF /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B7A04C16D78692001CCACF /* ViewController.xib */; };
+		07B7A05516D786B4001CCACF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B7A05416D786B4001CCACF /* QuartzCore.framework */; };
+		07B7A05716D786BA001CCACF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B7A05616D786BA001CCACF /* AVFoundation.framework */; };
+		07B7A05A16D7886F001CCACF /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07B7A05916D7886F001CCACF /* test.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07627E9516DA04290090C98E /* ZiggSongController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiggSongController.h; sourceTree = "<group>"; };
+		07627E9616DA04290090C98E /* ZiggSongController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiggSongController.m; sourceTree = "<group>"; };
+		07B7A02D16D78692001CCACF /* MP3Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MP3Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07B7A03116D78692001CCACF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		07B7A03316D78692001CCACF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07B7A03516D78692001CCACF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		07B7A03916D78692001CCACF /* MP3Player-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MP3Player-Info.plist"; sourceTree = "<group>"; };
+		07B7A03B16D78692001CCACF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07B7A03D16D78692001CCACF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07B7A03F16D78692001CCACF /* MP3Player-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MP3Player-Prefix.pch"; sourceTree = "<group>"; };
+		07B7A04016D78692001CCACF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07B7A04116D78692001CCACF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07B7A04316D78692001CCACF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		07B7A04516D78692001CCACF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		07B7A04716D78692001CCACF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		07B7A04916D78692001CCACF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		07B7A04A16D78692001CCACF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		07B7A04D16D78692001CCACF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		07B7A05416D786B4001CCACF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		07B7A05616D786BA001CCACF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		07B7A05916D7886F001CCACF /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07B7A02A16D78692001CCACF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07B7A05716D786BA001CCACF /* AVFoundation.framework in Frameworks */,
+				07B7A05516D786B4001CCACF /* QuartzCore.framework in Frameworks */,
+				07B7A03216D78692001CCACF /* UIKit.framework in Frameworks */,
+				07B7A03416D78692001CCACF /* Foundation.framework in Frameworks */,
+				07B7A03616D78692001CCACF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07B7A02216D78692001CCACF = {
+			isa = PBXGroup;
+			children = (
+				07B7A05816D7886F001CCACF /* res */,
+				07B7A05616D786BA001CCACF /* AVFoundation.framework */,
+				07B7A05416D786B4001CCACF /* QuartzCore.framework */,
+				07B7A03716D78692001CCACF /* MP3Player */,
+				07B7A03016D78692001CCACF /* Frameworks */,
+				07B7A02E16D78692001CCACF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07B7A02E16D78692001CCACF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07B7A02D16D78692001CCACF /* MP3Player.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07B7A03016D78692001CCACF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07B7A03116D78692001CCACF /* UIKit.framework */,
+				07B7A03316D78692001CCACF /* Foundation.framework */,
+				07B7A03516D78692001CCACF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07B7A03716D78692001CCACF /* MP3Player */ = {
+			isa = PBXGroup;
+			children = (
+				07B7A04016D78692001CCACF /* AppDelegate.h */,
+				07B7A04116D78692001CCACF /* AppDelegate.m */,
+				07B7A04916D78692001CCACF /* ViewController.h */,
+				07B7A04A16D78692001CCACF /* ViewController.m */,
+				07B7A04C16D78692001CCACF /* ViewController.xib */,
+				07627E9516DA04290090C98E /* ZiggSongController.h */,
+				07627E9616DA04290090C98E /* ZiggSongController.m */,
+				07B7A03816D78692001CCACF /* Supporting Files */,
+			);
+			path = MP3Player;
+			sourceTree = "<group>";
+		};
+		07B7A03816D78692001CCACF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07B7A03916D78692001CCACF /* MP3Player-Info.plist */,
+				07B7A03A16D78692001CCACF /* InfoPlist.strings */,
+				07B7A03D16D78692001CCACF /* main.m */,
+				07B7A03F16D78692001CCACF /* MP3Player-Prefix.pch */,
+				07B7A04316D78692001CCACF /* Default.png */,
+				07B7A04516D78692001CCACF /* Default@2x.png */,
+				07B7A04716D78692001CCACF /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07B7A05816D7886F001CCACF /* res */ = {
+			isa = PBXGroup;
+			children = (
+				07B7A05916D7886F001CCACF /* test.mp3 */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07B7A02C16D78692001CCACF /* MP3Player */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07B7A05116D78692001CCACF /* Build configuration list for PBXNativeTarget "MP3Player" */;
+			buildPhases = (
+				07B7A02916D78692001CCACF /* Sources */,
+				07B7A02A16D78692001CCACF /* Frameworks */,
+				07B7A02B16D78692001CCACF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MP3Player;
+			productName = MP3Player;
+			productReference = 07B7A02D16D78692001CCACF /* MP3Player.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07B7A02416D78692001CCACF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = ziggear;
+			};
+			buildConfigurationList = 07B7A02716D78692001CCACF /* Build configuration list for PBXProject "MP3Player" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 07B7A02216D78692001CCACF;
+			productRefGroup = 07B7A02E16D78692001CCACF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07B7A02C16D78692001CCACF /* MP3Player */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07B7A02B16D78692001CCACF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07B7A03C16D78692001CCACF /* InfoPlist.strings in Resources */,
+				07B7A04416D78692001CCACF /* Default.png in Resources */,
+				07B7A04616D78692001CCACF /* Default@2x.png in Resources */,
+				07B7A04816D78692001CCACF /* Default-568h@2x.png in Resources */,
+				07B7A04E16D78692001CCACF /* ViewController.xib in Resources */,
+				07B7A05A16D7886F001CCACF /* test.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07B7A02916D78692001CCACF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07B7A03E16D78692001CCACF /* main.m in Sources */,
+				07B7A04216D78692001CCACF /* AppDelegate.m in Sources */,
+				07B7A04B16D78692001CCACF /* ViewController.m in Sources */,
+				07627E9716DA04290090C98E /* ZiggSongController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		07B7A03A16D78692001CCACF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07B7A03B16D78692001CCACF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		07B7A04C16D78692001CCACF /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07B7A04D16D78692001CCACF /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07B7A04F16D78692001CCACF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		07B7A05016D78692001CCACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07B7A05216D78692001CCACF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MP3Player/MP3Player-Prefix.pch";
+				INFOPLIST_FILE = "MP3Player/MP3Player-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		07B7A05316D78692001CCACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MP3Player/MP3Player-Prefix.pch";
+				INFOPLIST_FILE = "MP3Player/MP3Player-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07B7A02716D78692001CCACF /* Build configuration list for PBXProject "MP3Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07B7A04F16D78692001CCACF /* Debug */,
+				07B7A05016D78692001CCACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07B7A05116D78692001CCACF /* Build configuration list for PBXNativeTarget "MP3Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07B7A05216D78692001CCACF /* Debug */,
+				07B7A05316D78692001CCACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07B7A02416D78692001CCACF /* Project object */;
+}
