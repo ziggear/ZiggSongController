@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		07627E9716DA04290090C98E /* ZiggSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07627E9616DA04290090C98E /* ZiggSongController.m */; };
+		07656E4E16E1F30000B6DEDD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07656E4D16E1F30000B6DEDD /* ViewController.xib */; };
+		07656E5016E1FFB000B6DEDD /* onion.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 07656E4F16E1FFB000B6DEDD /* onion.lrc */; };
+		07A1A8A816E1E45100C82C48 /* onion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07A1A8A616E1E45100C82C48 /* onion.mp3 */; };
 		07B7A03216D78692001CCACF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B7A03116D78692001CCACF /* UIKit.framework */; };
 		07B7A03416D78692001CCACF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B7A03316D78692001CCACF /* Foundation.framework */; };
 		07B7A03616D78692001CCACF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B7A03516D78692001CCACF /* CoreGraphics.framework */; };
@@ -18,7 +21,6 @@
 		07B7A04616D78692001CCACF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B7A04516D78692001CCACF /* Default@2x.png */; };
 		07B7A04816D78692001CCACF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B7A04716D78692001CCACF /* Default-568h@2x.png */; };
 		07B7A04B16D78692001CCACF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B7A04A16D78692001CCACF /* ViewController.m */; };
-		07B7A04E16D78692001CCACF /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07B7A04C16D78692001CCACF /* ViewController.xib */; };
 		07B7A05516D786B4001CCACF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B7A05416D786B4001CCACF /* QuartzCore.framework */; };
 		07B7A05716D786BA001CCACF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B7A05616D786BA001CCACF /* AVFoundation.framework */; };
 		07B7A05A16D7886F001CCACF /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07B7A05916D7886F001CCACF /* test.mp3 */; };
@@ -27,6 +29,9 @@
 /* Begin PBXFileReference section */
 		07627E9516DA04290090C98E /* ZiggSongController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiggSongController.h; sourceTree = "<group>"; };
 		07627E9616DA04290090C98E /* ZiggSongController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiggSongController.m; sourceTree = "<group>"; };
+		07656E4D16E1F30000B6DEDD /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController.xib; path = ../ViewController.xib; sourceTree = "<group>"; };
+		07656E4F16E1FFB000B6DEDD /* onion.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = onion.lrc; sourceTree = "<group>"; };
+		07A1A8A616E1E45100C82C48 /* onion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = onion.mp3; sourceTree = "<group>"; };
 		07B7A02D16D78692001CCACF /* MP3Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MP3Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B7A03116D78692001CCACF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		07B7A03316D78692001CCACF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -42,7 +47,6 @@
 		07B7A04716D78692001CCACF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		07B7A04916D78692001CCACF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		07B7A04A16D78692001CCACF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		07B7A04D16D78692001CCACF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		07B7A05416D786B4001CCACF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		07B7A05616D786BA001CCACF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		07B7A05916D7886F001CCACF /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
@@ -101,7 +105,7 @@
 				07B7A04116D78692001CCACF /* AppDelegate.m */,
 				07B7A04916D78692001CCACF /* ViewController.h */,
 				07B7A04A16D78692001CCACF /* ViewController.m */,
-				07B7A04C16D78692001CCACF /* ViewController.xib */,
+				07656E4D16E1F30000B6DEDD /* ViewController.xib */,
 				07627E9516DA04290090C98E /* ZiggSongController.h */,
 				07627E9616DA04290090C98E /* ZiggSongController.m */,
 				07B7A03816D78692001CCACF /* Supporting Files */,
@@ -126,6 +130,8 @@
 		07B7A05816D7886F001CCACF /* res */ = {
 			isa = PBXGroup;
 			children = (
+				07656E4F16E1FFB000B6DEDD /* onion.lrc */,
+				07A1A8A616E1E45100C82C48 /* onion.mp3 */,
 				07B7A05916D7886F001CCACF /* test.mp3 */,
 			);
 			path = res;
@@ -186,8 +192,10 @@
 				07B7A04416D78692001CCACF /* Default.png in Resources */,
 				07B7A04616D78692001CCACF /* Default@2x.png in Resources */,
 				07B7A04816D78692001CCACF /* Default-568h@2x.png in Resources */,
-				07B7A04E16D78692001CCACF /* ViewController.xib in Resources */,
 				07B7A05A16D7886F001CCACF /* test.mp3 in Resources */,
+				07A1A8A816E1E45100C82C48 /* onion.mp3 in Resources */,
+				07656E4E16E1F30000B6DEDD /* ViewController.xib in Resources */,
+				07656E5016E1FFB000B6DEDD /* onion.lrc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +222,6 @@
 				07B7A03B16D78692001CCACF /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		07B7A04C16D78692001CCACF /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07B7A04D16D78692001CCACF /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

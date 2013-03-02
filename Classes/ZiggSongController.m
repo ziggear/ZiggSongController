@@ -18,13 +18,15 @@
 @synthesize ZSC_songName;
 @synthesize ZSC_artistName;
 @synthesize ZSC_albumCover;
+@synthesize ZSC_duration;
 
 #pragma mark zsc_class_definition -
 
+//从Bundle目录初始化文件
 - (id) initInBundlePathWithSongName:(NSString *)name andType:(NSString *)type{
     if (self = ([super init])) {
         self.ZSC_filePath = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:name ofType:type]];
-        self.ZSC_audioPlayer = [[[AVAudioPlayer alloc] initWithContentsOfURL:ZSC_filePath] error:nil];
+        self.ZSC_audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:ZSC_filePath error:nil];
         self.ZSC_fileName = name;
         self.ZSC_fileType = type;
     }
@@ -33,6 +35,7 @@
     return self;
 }
 
+//从Document目录初始化文件
 - (id) initInDocumentPathWithSongName:(NSString *)name andType:(NSString *)type{
     if (self = ([super init])) {
         
@@ -40,6 +43,7 @@
     return self;
 }
 
+//加载MP3的元数据（歌名、艺术家、封面）
 - (void) loadMetaData {
     ZSC_fileAsset = [AVURLAsset URLAssetWithURL:ZSC_filePath options:nil];
     
@@ -66,14 +70,19 @@
 
 }
 
+//初始化播放器
 - (void) preparePlayer {
     ZSC_audioPlayer.enableRate = YES;
     ZSC_audioPlayer.meteringEnabled = YES;
     ZSC_audioPlayer.delegate = self;
     ZSC_audioPlayer.volume = 1.0;
-    [ZSC_audioPlayer prepareToPlay];
+    [ZSC_audioPlayer prepareToPlay];          //准备播放器参数
     
-    ZSC_isPlaying = NO;
+    ZSC_duration = ZSC_audioPlayer.duration;  // 获取播放时长
+    ZSC_interval = 10.0f;                     // 设置快进、快退时长
+    ZSC_isPlaying = NO;                       // 播放标志
+    
+    [self lyrics_LoadLyricsWithName];
 }
 
 
@@ -101,6 +110,49 @@
     [ZSC_audioPlayer stop];
 }
 
+//播放控制：快进
+- (void) player_Foward {
+    [ZSC_audioPlayer pause];
+    float time = ZSC_audioPlayer.currentTime + ZSC_interval;
+    
+    if (time >= ZSC_interval) {
+        time = ZSC_interval;
+    }
+    
+    [ZSC_audioPlayer setCurrentTime:time];
+    [self player_PlayOrPause];
+}
+
+//播放控制：快退
+- (void) player_Backward {
+    [ZSC_audioPlayer pause];
+    float time = ZSC_audioPlayer.currentTime - ZSC_interval;
+    
+    if (time <= 0) {
+        time = 0;
+    }
+    
+    [ZSC_audioPlayer setCurrentTime:time];
+    [self player_PlayOrPause];
+}
+
+//播放控制：按进度播放
+- (void) player_PlayAtPercent:(float)percent{
+    [self player_PlayOrPause];
+    float time = ZSC_duration * percent;
+    
+    if (time <= 0) {
+        time = 0;
+    } else {
+        if (time >= ZSC_duration) {
+            time = ZSC_duration;
+        }
+    }
+    
+    [ZSC_audioPlayer setCurrentTime:time];
+    [self player_PlayOrPause];
+}
+
 #pragma mark zsc_player_delegate -
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer*)player successfully:(BOOL)flag{
@@ -116,6 +168,28 @@
     //处理中断结束的代码
 }
 
+
+#pragma mark zsc_lyrics -
+
+
+- (void) lyrics_LoadLyricsWithName {
+    NSFileManager *fm;
+    
+    fm = [NSFileManager defaultManager];
+    NSString *documentsDirectory= NSHomeDirectory();
+    NSString *filePath= [documentsDirectory
+                         stringByAppendingPathComponent:[NSString stringWithFormat:@"MP3Player.app/%@.lrc",ZSC_fileName]];
+    NSLog(@"%@",filePath);
+    
+    if([fm fileExistsAtPath:filePath]){
+        NSLog(@"Lyrics exist");
+        
+        
+        
+    } else {
+        NSLog(@"Lyrics not exist");
+    }
+}
 
 
 @end

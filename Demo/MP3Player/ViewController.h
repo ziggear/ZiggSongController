@@ -8,9 +8,11 @@
 #import <AVFoundation/AVFoundation.h>
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
+#import "ZiggSongController.h"
 
 
 @interface ViewController : UIViewController<AVAudioPlayerDelegate>{
+    ZiggSongController *zigg;
     AVAudioPlayer* player;
     NSTimer* timer;
     UISlider *pro;
@@ -18,7 +20,7 @@
     UIButton* but;
     
     UIImageView *cover;
-    UILabel *title;
+    UILabel *gtitle;
     UILabel *artist;
     UILabel *duration;
     UILabel *curr;
@@ -28,8 +30,9 @@
 @property(nonatomic,retain)IBOutlet UISlider* vol;
 @property(nonatomic,retain)IBOutlet UIButton* but;
 @property(nonatomic,retain)IBOutlet UIImageView *cover;
-@property(nonatomic,retain)IBOutlet UILabel *title;
+@property(nonatomic,retain)IBOutlet UILabel *gtitle;
 @property(nonatomic,retain)IBOutlet UILabel *artist;
 @property(nonatomic,retain)IBOutlet UILabel *duration;
 @property(nonatomic,retain)IBOutlet UILabel *curr;
+
 @end
