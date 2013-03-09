@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ViewController.m"
-         timestampString = "383903636.712259"
+         timestampString = "384500518.286068"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "28"
-         endingLineNumber = "28"
+         startingLineNumber = "27"
+         endingLineNumber = "27"
          landmarkName = "-buttonPressed:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ViewController.m"
-         timestampString = "383903636.712259"
+         timestampString = "384500569.76703"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "32"
-         endingLineNumber = "32"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
          landmarkName = "-volumeChanged:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ViewController.m"
-         timestampString = "383903636.712259"
+         timestampString = "384500569.76703"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "33"
-         endingLineNumber = "33"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
          landmarkName = "-volumeChanged:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ViewController.m"
-         timestampString = "383904048.474319"
+         timestampString = "384500569.76703"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "39"
-         endingLineNumber = "39"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
          landmarkName = "-valueChanged:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,24 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ViewController.m"
-         timestampString = "383904048.474319"
+         timestampString = "384500569.76703"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "39"
-         endingLineNumber = "39"
-         landmarkName = "-valueChanged:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "MP3Player/ViewController.m"
-         timestampString = "383904048.474319"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "39"
-         endingLineNumber = "39"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
          landmarkName = "-valueChanged:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,11 +73,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ViewController.m"
-         timestampString = "383904048.474319"
+         timestampString = "384500569.76703"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "48"
-         endingLineNumber = "48"
+         startingLineNumber = "41"
+         endingLineNumber = "41"
+         landmarkName = "-valueChanged:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MP3Player/ViewController.m"
+         timestampString = "384500569.76703"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "50"
+         endingLineNumber = "50"
          landmarkName = "-handleTimer:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -112,11 +112,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ZiggSongController.m"
-         timestampString = "383909335.990545"
+         timestampString = "384519113.155846"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "21"
-         endingLineNumber = "21"
+         startingLineNumber = "22"
+         endingLineNumber = "22"
          landmarkName = "ZSC_duration"
          landmarkType = "19">
       </FileBreakpoint>
@@ -125,25 +125,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ViewController.m"
-         timestampString = "383904048.474319"
+         timestampString = "384500729.317122"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "62"
-         endingLineNumber = "62"
+         startingLineNumber = "65"
+         endingLineNumber = "65"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "MP3Player/ViewController.m"
-         timestampString = "383904048.474319"
+         filePath = "MP3Player/ZiggSongController.m"
+         timestampString = "384519113.155846"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "40"
-         endingLineNumber = "40"
-         landmarkName = "-valueChanged:"
+         startingLineNumber = "192"
+         endingLineNumber = "192"
+         landmarkName = "-lyrics_LoadLyricsWithName"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -151,11 +151,50 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ZiggSongController.m"
-         timestampString = "383909335.990545"
+         timestampString = "384519113.155846"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "28"
-         endingLineNumber = "28"
+         startingLineNumber = "193"
+         endingLineNumber = "193"
+         landmarkName = "-lyrics_LoadLyricsWithName"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MP3Player/ZiggSongController.m"
+         timestampString = "384519113.155846"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "195"
+         endingLineNumber = "195"
+         landmarkName = "-lyrics_LoadLyricsWithName"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MP3Player/ZiggSongController.m"
+         timestampString = "384519113.155846"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "230"
+         endingLineNumber = "230"
+         landmarkName = "-lyrics_LoadLyricsWithName"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MP3Player/ZiggSongController.m"
+         timestampString = "384519113.155846"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "37"
+         endingLineNumber = "37"
          landmarkName = "-initInBundlePathWithSongName:andType:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -164,24 +203,89 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ZiggSongController.m"
-         timestampString = "383909335.990545"
+         timestampString = "384519113.155846"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "29"
-         endingLineNumber = "29"
+         startingLineNumber = "39"
+         endingLineNumber = "39"
          landmarkName = "-initInBundlePathWithSongName:andType:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ZiggSongController.m"
-         timestampString = "383909591.696636"
+         timestampString = "384519113.155846"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "179"
-         endingLineNumber = "179"
+         startingLineNumber = "38"
+         endingLineNumber = "38"
+         landmarkName = "-initInBundlePathWithSongName:andType:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MP3Player/ZiggSongController.m"
+         timestampString = "384519113.155846"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "36"
+         endingLineNumber = "36"
+         landmarkName = "-initInBundlePathWithSongName:andType:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MP3Player/ZiggSongController.m"
+         timestampString = "384519113.155846"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "39"
+         endingLineNumber = "39"
+         landmarkName = "-initInBundlePathWithSongName:andType:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MP3Player/ZiggSongController.m"
+         timestampString = "384519113.155846"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "197"
+         endingLineNumber = "197"
+         landmarkName = "-lyrics_LoadLyricsWithName"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MP3Player/ZiggSongController.m"
+         timestampString = "384519113.155846"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "201"
+         endingLineNumber = "201"
+         landmarkName = "-lyrics_LoadLyricsWithName"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MP3Player/ZiggSongController.m"
+         timestampString = "384519113.155846"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "209"
+         endingLineNumber = "209"
          landmarkName = "-lyrics_LoadLyricsWithName"
          landmarkType = "5">
       </FileBreakpoint>
@@ -190,11 +294,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ZiggSongController.m"
-         timestampString = "383909591.696636"
+         timestampString = "384519113.155846"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "181"
-         endingLineNumber = "181"
+         startingLineNumber = "228"
+         endingLineNumber = "228"
          landmarkName = "-lyrics_LoadLyricsWithName"
          landmarkType = "5">
       </FileBreakpoint>
@@ -203,24 +307,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ZiggSongController.m"
-         timestampString = "383909591.696636"
+         timestampString = "384519113.155846"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "183"
-         endingLineNumber = "183"
+         startingLineNumber = "225"
+         endingLineNumber = "225"
          landmarkName = "-lyrics_LoadLyricsWithName"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MP3Player/ZiggSongController.m"
-         timestampString = "383909783.713432"
+         timestampString = "384519113.155846"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "190"
-         endingLineNumber = "190"
+         startingLineNumber = "229"
+         endingLineNumber = "229"
          landmarkName = "-lyrics_LoadLyricsWithName"
          landmarkType = "5">
       </FileBreakpoint>

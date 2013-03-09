@@ -25,7 +25,9 @@
 
 //播放、暂停
 - (IBAction)buttonPressed:(id)sender {
+    
     [zigg player_PlayOrPause];
+    
 }
 
 //音量调节
@@ -37,7 +39,7 @@
 - (IBAction)valueChanged:(id)sender{
     float val = pro.value;
     [zigg player_PlayAtPercent:val];
-    
+
 }
 
 
@@ -47,6 +49,7 @@
                      (int) currentTime /60,
                      (int) currentTime %60];
     pro.value =  currentTime / zigg.ZSC_duration;
+
 }
 
 - (void)viewDidLoad
@@ -55,7 +58,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     zigg = [[ZiggSongController alloc] initInBundlePathWithSongName:@"onion" andType:@"mp3"];
-    [zigg player_PlayOrPause];
+    //[zigg player_PlayOrPause];
     
     
     duration.text = [NSString stringWithFormat: @"%d:%d",
@@ -70,6 +73,7 @@
     gtitle.text = zigg.ZSC_songName;
     artist.text = zigg.ZSC_artistName;
     [cover setImage:zigg.ZSC_albumCover];
+
 
     
 }

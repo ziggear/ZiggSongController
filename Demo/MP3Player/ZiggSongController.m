@@ -7,6 +7,7 @@
 //
 
 #import "ZiggSongController.h"
+#import "ZiggLyrics.h"
 
 @implementation ZiggSongController
 
@@ -19,12 +20,22 @@
 @synthesize ZSC_artistName;
 @synthesize ZSC_albumCover;
 @synthesize ZSC_duration;
+@synthesize ZSC_dirName;
+
+struct Line {
+    NSString *time;
+    NSString *lyrics;
+}oneLine;
 
 #pragma mark zsc_class_definition -
 
 //从Bundle目录初始化文件
 - (id) initInBundlePathWithSongName:(NSString *)name andType:(NSString *)type{
     if (self = ([super init])) {
+        NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+        NSString *bdlName = [infoDictionary objectForKey:@"CFBundleDisplayName"];                                              //获取bundle name
+        self.ZSC_dirName = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"/%@.app/",bdlName]]; //保存bundle路径
+        
         self.ZSC_filePath = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:name ofType:type]];
         self.ZSC_audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:ZSC_filePath error:nil];
         self.ZSC_fileName = name;
@@ -40,6 +51,8 @@
     if (self = ([super init])) {
         
     }
+    [self loadMetaData];
+    [self preparePlayer];
     return self;
 }
 
@@ -157,6 +170,7 @@
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer*)player successfully:(BOOL)flag{
     //播放结束时执行的动作
+    ZSC_isPlaying = NO;
 }
 - (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer*)player error:(NSError *)error{
     //解码错误执行的动作
@@ -176,19 +190,79 @@
     NSFileManager *fm;
     
     fm = [NSFileManager defaultManager];
-    NSString *documentsDirectory= NSHomeDirectory();
-    NSString *filePath= [documentsDirectory
-                         stringByAppendingPathComponent:[NSString stringWithFormat:@"MP3Player.app/%@.lrc",ZSC_fileName]];
+    NSString *filePath= [ZSC_dirName stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.lrc",ZSC_fileName]];
     NSLog(@"%@",filePath);
     
     if([fm fileExistsAtPath:filePath]){
         NSLog(@"Lyrics exist");
         
+        NSError *error;
+        
+        NSString *textFileContents = [NSString stringWithContentsOfFile:filePath
+                                      
+                                      encoding:NSUTF8StringEncoding
+                                      
+                                      error: &error];
+        
+        // If there are no results, something went wrong
+        
+        if (textFileContents == nil) {
+            
+            // an error occurred
+            
+            NSLog(@"Error reading text file. %@", [error localizedFailureReason]);
+            
+        }
+        
+        NSArray *lines = [textFileContents componentsSeparatedByString:@"\n"];
+        
+        NSLog(@"Number of lines in the file:%d", [lines count] );
+        
+
+        NSString *r1 = nil;
+        NSString *r2 = nil;
+        ZiggLyrics *line = [self divideString:[lines objectAtIndex:3]];
+        
+        NSLog(@"time: %@, lyrics: %@", line.time, line.lyrics);
         
         
     } else {
         NSLog(@"Lyrics not exist");
     }
+}
+
+- (ZiggLyrics *) divideString:(NSString *)str {
+    ZiggLyrics *ln = [[ZiggLyrics alloc] init];
+    
+    NSMutableString *sch = [NSMutableString stringWithFormat:@"%@",str];
+    NSError *err;
+    NSString *pattern = @"(.)+(\\d{2})+:+(\\d{2})+.+(\\d{2})+(.)";
+    
+    NSRegularExpression *reg = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive|NSRegularExpressionDotMatchesLineSeparators error:&err];
+    
+    NSArray *matches =     [reg matchesInString:sch options:NSMatchingCompleted range:NSMakeRange(0, [sch length])];
+    
+    for (NSTextCheckingResult *match in matches) {
+        
+        NSRange range = [match range];
+        NSLog(@"%d,%d,%@",range.location,range.length,[sch substringWithRange:range]);
+        
+        [ln setTime:[sch substringWithRange:range]];
+        
+        //capture groups
+        for (int i = 0; i< [match numberOfRanges]; i++) {
+            NSRange range1 = [match rangeAtIndex:i];
+            NSLog(@"%d :%@",i,[sch substringWithRange:range1]);
+        }
+        
+    }
+    [reg replaceMatchesInString:sch options:NSMatchingCompleted range:NSMakeRange(0, [sch length]) withTemplate:@""];
+    
+    NSLog(@"%@",sch);
+    
+    [ln setLyrics:sch];
+    
+    return ln;
 }
 
 

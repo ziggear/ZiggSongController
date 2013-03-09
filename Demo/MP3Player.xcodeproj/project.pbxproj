@@ -10,6 +10,7 @@
 		07627E9716DA04290090C98E /* ZiggSongController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07627E9616DA04290090C98E /* ZiggSongController.m */; };
 		07656E4E16E1F30000B6DEDD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07656E4D16E1F30000B6DEDD /* ViewController.xib */; };
 		07656E5016E1FFB000B6DEDD /* onion.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 07656E4F16E1FFB000B6DEDD /* onion.lrc */; };
+		07A055F716EB4AC80061F2AD /* ZiggLyrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A055F616EB4AC80061F2AD /* ZiggLyrics.m */; };
 		07A1A8A816E1E45100C82C48 /* onion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 07A1A8A616E1E45100C82C48 /* onion.mp3 */; };
 		07B7A03216D78692001CCACF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B7A03116D78692001CCACF /* UIKit.framework */; };
 		07B7A03416D78692001CCACF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B7A03316D78692001CCACF /* Foundation.framework */; };
@@ -31,6 +32,8 @@
 		07627E9616DA04290090C98E /* ZiggSongController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiggSongController.m; sourceTree = "<group>"; };
 		07656E4D16E1F30000B6DEDD /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewController.xib; path = ../ViewController.xib; sourceTree = "<group>"; };
 		07656E4F16E1FFB000B6DEDD /* onion.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = onion.lrc; sourceTree = "<group>"; };
+		07A055F516EB4AC80061F2AD /* ZiggLyrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiggLyrics.h; sourceTree = "<group>"; };
+		07A055F616EB4AC80061F2AD /* ZiggLyrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiggLyrics.m; sourceTree = "<group>"; };
 		07A1A8A616E1E45100C82C48 /* onion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = onion.mp3; sourceTree = "<group>"; };
 		07B7A02D16D78692001CCACF /* MP3Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MP3Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B7A03116D78692001CCACF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -108,6 +111,8 @@
 				07656E4D16E1F30000B6DEDD /* ViewController.xib */,
 				07627E9516DA04290090C98E /* ZiggSongController.h */,
 				07627E9616DA04290090C98E /* ZiggSongController.m */,
+				07A055F516EB4AC80061F2AD /* ZiggLyrics.h */,
+				07A055F616EB4AC80061F2AD /* ZiggLyrics.m */,
 				07B7A03816D78692001CCACF /* Supporting Files */,
 			);
 			path = MP3Player;
@@ -210,6 +215,7 @@
 				07B7A04216D78692001CCACF /* AppDelegate.m in Sources */,
 				07B7A04B16D78692001CCACF /* ViewController.m in Sources */,
 				07627E9716DA04290090C98E /* ZiggSongController.m in Sources */,
+				07A055F716EB4AC80061F2AD /* ZiggLyrics.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

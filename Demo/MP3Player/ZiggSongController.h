@@ -18,6 +18,7 @@
     NSString*      ZSC_dirName;
     NSString*      ZSC_fileName;
     NSString*      ZSC_fileType;
+    NSData*        ZSC_fileData;
     NSURL*         ZSC_filePath;
     NSString*      ZSC_songName;
     NSString*      ZSC_artistName;
@@ -41,12 +42,19 @@
 @property (nonatomic, retain) NSString*      ZSC_dirName;
 @property (nonatomic, retain) NSString*      ZSC_fileName;
 @property (nonatomic, retain) NSString*      ZSC_fileType;
+@property (nonatomic, retain) NSData*        ZSC_fileData;
 @property (nonatomic, retain) NSURL*         ZSC_filePath;
 @property (nonatomic, retain) NSString*      ZSC_songName;
 @property (nonatomic, retain) NSString*      ZSC_artistName;
 @property (nonatomic, retain) UIImage*       ZSC_albumCover;
-@property float ZSC_duration;
 
+@property float          ZSC_duration;
+@property float          ZSC_interval;
+@property BOOL           ZSC_isSongNameFound;
+@property BOOL           ZSC_isArtistNameFound;
+@property BOOL           ZSC_isCoverFound;
+@property BOOL           ZSC_isLyricsFound;
+@property BOOL           ZSC_isPlaying;
 
 - (id) initInBundlePathWithSongName:(NSString *)name andType:(NSString *)type;
 - (id) initInDocumentPathWithSongName:(NSString *)name andType:(NSString *)type;
