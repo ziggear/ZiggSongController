@@ -1,7 +1,10 @@
 ZiggSongController
 ==================
 
-A Simple iOS Audio Controller
+A Simple iOS Audio Controller 
+
+[Download Zip Pack]
+[Download Zip Pack]: https://github.com/ziggear/ZiggSongController/archive/master.zip "download"
 
 Usage
 -----
