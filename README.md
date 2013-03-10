@@ -17,3 +17,9 @@ Screen Shots
 
 ![Demo App](Demo/shortcut.png)
 
+Weaks and Limits
+----------------
+
+*  Cannot show correct time when duration > 60min
+*  Have low efficiency in loading and showing lrc files
+
