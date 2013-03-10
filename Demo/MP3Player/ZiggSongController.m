@@ -21,6 +21,9 @@
 @synthesize ZSC_albumCover;
 @synthesize ZSC_duration;
 @synthesize ZSC_dirName;
+@synthesize ZSC_lyricsData;
+@synthesize ZSC_lyricsLines;
+@synthesize ZSC_currentLyricsLine;
 
 struct Line {
     NSString *time;
@@ -40,6 +43,8 @@ struct Line {
         self.ZSC_audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:ZSC_filePath error:nil];
         self.ZSC_fileName = name;
         self.ZSC_fileType = type;
+        
+        self.ZSC_lyricsData = [[NSMutableArray alloc] initWithCapacity:1];
     }
     [self loadMetaData];
     [self preparePlayer];
@@ -185,7 +190,7 @@ struct Line {
 
 #pragma mark zsc_lyrics -
 
-
+//加载歌词文件
 - (void) lyrics_LoadLyricsWithName {
     NSFileManager *fm;
     
@@ -197,46 +202,70 @@ struct Line {
         NSLog(@"Lyrics exist");
         
         NSError *error;
-        
         NSString *textFileContents = [NSString stringWithContentsOfFile:filePath
-                                      
                                       encoding:NSUTF8StringEncoding
-                                      
                                       error: &error];
-        
         // If there are no results, something went wrong
-        
         if (textFileContents == nil) {
-            
             // an error occurred
-            
             NSLog(@"Error reading text file. %@", [error localizedFailureReason]);
-            
         }
-        
         NSArray *lines = [textFileContents componentsSeparatedByString:@"\n"];
+        NSLog(@"Number of lines in the lyrics:%d", [lines count] );
         
-        NSLog(@"Number of lines in the file:%d", [lines count] );
+        [self setZSC_lyricsLines:[lines count]];
+        [self setZSC_currentLyricsLine:0];
         
-
-        NSString *r1 = nil;
-        NSString *r2 = nil;
-        ZiggLyrics *line = [self divideString:[lines objectAtIndex:3]];
-        
-        NSLog(@"time: %@, lyrics: %@", line.time, line.lyrics);
-        
-        
+        //转存歌词数据到ZSC_lyricsData
+        for (NSString *singleLine in lines){
+            //arr = [self regexArrayFromString:[lines objectAtIndex:3] pattern:@"(.)+(\\d{2})+:+(\\d{2})+.+(\\d{2})+(.)"];
+            NSString *arr = nil;
+            arr = [self regexStringFromString:singleLine pattern:@"(\\d{2})+:+(\\d{2})+.+(\\d{2})"];
+            NSMutableString *str = [NSMutableString stringWithFormat:@"%@",singleLine];
+            NSString *x = [str stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"[%@]",arr] withString:@""] ;
+            ZiggLyrics *tempLyrics = [self divideString:x andTime:arr];
+            [ZSC_lyricsData addObject:tempLyrics];
+        }
+    
+    /*
+        for (ZiggLyrics *zigg in ZSC_lyricsData) {
+            NSLog(@"%@",zigg.lyrics);
+        }
+    */
+    
     } else {
         NSLog(@"Lyrics not exist");
     }
 }
 
-- (ZiggLyrics *) divideString:(NSString *)str {
+//单行歌词文件的处理
+- (ZiggLyrics *) divideString:(NSString *)str andTime:(NSString *)time{
     ZiggLyrics *ln = [[ZiggLyrics alloc] init];
+    [ln setLyrics:str];
     
-    NSMutableString *sch = [NSMutableString stringWithFormat:@"%@",str];
+    NSString *minute = [time substringWithRange:NSMakeRange(0, 2)];
+    NSString *second = [time substringWithRange:NSMakeRange(3, 2)];
+    NSString *msecond = [time substringWithRange:NSMakeRange(6, 2)];
+    
+    int t_minute = [minute intValue];
+    int t_second = [second intValue];
+    int t_msecond = [msecond intValue];
+    
+    float t_time = t_minute * 60 + t_second + t_msecond / 100;
+    
+    [ln setTime:t_time];
+    //NSLog(@"%f : %@",ln.time,ln.lyrics);
+    return ln;
+}
+
+//辅助：正则表达式分析一个字符串，结果存为array
+- (NSMutableArray *) regexArrayFromString:(NSString *)regexString pattern:(NSString *)regexPattern {
+    NSMutableArray *result = [[NSMutableArray alloc] initWithCapacity:1];
+    
+    NSMutableString *sch = [NSMutableString stringWithFormat:@"%@",regexString];
     NSError *err;
-    NSString *pattern = @"(.)+(\\d{2})+:+(\\d{2})+.+(\\d{2})+(.)";
+    //NSString *pattern = @"(.)+(\\d{2})+:+(\\d{2})+.+(\\d{2})+(.)";
+    NSString *pattern = regexPattern;
     
     NSRegularExpression *reg = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive|NSRegularExpressionDotMatchesLineSeparators error:&err];
     
@@ -245,25 +274,69 @@ struct Line {
     for (NSTextCheckingResult *match in matches) {
         
         NSRange range = [match range];
-        NSLog(@"%d,%d,%@",range.location,range.length,[sch substringWithRange:range]);
+        //NSLog(@"%d,%d,%@",range.location,range.length,[sch substringWithRange:range]);
         
-        [ln setTime:[sch substringWithRange:range]];
+        [result addObject:[sch substringWithRange:range]];
         
         //capture groups
         for (int i = 0; i< [match numberOfRanges]; i++) {
             NSRange range1 = [match rangeAtIndex:i];
-            NSLog(@"%d :%@",i,[sch substringWithRange:range1]);
+            //NSLog(@"%d :%@",i,[sch substringWithRange:range1]);
+            [result addObject:[sch substringWithRange:range1]];
         }
         
     }
-    [reg replaceMatchesInString:sch options:NSMatchingCompleted range:NSMakeRange(0, [sch length]) withTemplate:@""];
-    
-    NSLog(@"%@",sch);
-    
-    [ln setLyrics:sch];
-    
-    return ln;
+
+    NSLog(@"%@",result);
+    return result;
 }
 
+//辅助：正则表达式分析一个字符串，唯一结果存为NSString
+- (NSString *) regexStringFromString:(NSString *)regexString pattern:(NSString *)regexPattern {
+    NSString *result = nil;
+    
+    NSMutableString *sch = [NSMutableString stringWithFormat:@"%@",regexString];
+    NSError *err;
+    //NSString *pattern = @"(.)+(\\d{2})+:+(\\d{2})+.+(\\d{2})+(.)";
+    NSString *pattern = regexPattern;
+    
+    NSRegularExpression *reg = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive|NSRegularExpressionDotMatchesLineSeparators error:&err];
+    
+    NSArray *matches =     [reg matchesInString:sch options:NSMatchingCompleted range:NSMakeRange(0, [sch length])];
+    
+    for (NSTextCheckingResult *match in matches) {
+        
+        NSRange range = [match range];
+        //NSLog(@"%d,%d,%@",range.location,range.length,[sch substringWithRange:range]);
+        
+        result = [NSString stringWithFormat:@"%@",[sch substringWithRange:range]];
+        
+        //capture groups
+        /*
+        for (int i = 0; i< [match numberOfRanges]; i++) {
+            NSRange range1 = [match rangeAtIndex:i];
+            //NSLog(@"%d :%@",i,[sch substringWithRange:range1]);
+            [result addObject:[sch substringWithRange:range1]];
+        }
+         */
+        
+    }
+    
+    //NSLog(@"%@",result);
+    return result;
+}
+
+
+- (NSString *) loadALineIn:(float) second {
+    
+    //ZiggLyrics *temp = [ZSC_lyricsData objectAtIndex:ZSC_currentLyricsLine];
+    for (ZiggLyrics *temp in ZSC_lyricsData) {
+        if (temp.time == (int)second) {
+            return temp.lyrics;
+        }
+    }
+    
+    return nil;
+}
 
 @end

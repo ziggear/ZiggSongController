@@ -26,15 +26,19 @@
     NSData*        ZSC_lyricsFile;
     
     //Media Data
-    float          ZSC_duration; //seconds
-    float          ZSC_interval; //seconds
+    float               ZSC_duration; //seconds
+    float               ZSC_interval; //seconds
     
     //Others
-    BOOL           ZSC_isSongNameFound;
-    BOOL           ZSC_isArtistNameFound;
-    BOOL           ZSC_isCoverFound;
-    BOOL           ZSC_isLyricsFound;
-    BOOL           ZSC_isPlaying;
+    BOOL                ZSC_isSongNameFound;
+    BOOL                ZSC_isArtistNameFound;
+    BOOL                ZSC_isCoverFound;
+    BOOL                ZSC_isLyricsFound;
+    BOOL                ZSC_isPlaying;
+    
+    NSMutableArray*     ZSC_lyricsData;
+    int                 ZSC_lyricsLines;
+    int                 ZSC_currentLyricsLine;
 }
 
 @property (nonatomic, retain) AVAudioPlayer* ZSC_audioPlayer;
@@ -56,6 +60,10 @@
 @property BOOL           ZSC_isLyricsFound;
 @property BOOL           ZSC_isPlaying;
 
+@property (nonatomic, retain) NSMutableArray*     ZSC_lyricsData;
+@property int               ZSC_lyricsLines;
+@property int               ZSC_currentLyricsLine;
+
 - (id) initInBundlePathWithSongName:(NSString *)name andType:(NSString *)type;
 - (id) initInDocumentPathWithSongName:(NSString *)name andType:(NSString *)type;
 - (void) player_Play;
@@ -65,5 +73,5 @@
 - (void) player_Foward;
 - (void) player_Backward;
 - (void) player_PlayAtPercent:(float)percent;
-
+- (NSString *) loadALineIn:(float) second;
 @end

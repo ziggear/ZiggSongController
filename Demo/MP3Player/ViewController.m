@@ -21,7 +21,9 @@
 @synthesize artist;
 @synthesize duration;
 @synthesize curr;
+@synthesize curr_second;
 @synthesize pro;
+@synthesize lyrics_line;
 
 //播放、暂停
 - (IBAction)buttonPressed:(id)sender {
@@ -48,7 +50,14 @@
     curr.text = [NSString stringWithFormat: @"%d:%d",
                      (int) currentTime /60,
                      (int) currentTime %60];
+    
+    curr_second.text = [NSString stringWithFormat: @"%d",(int) currentTime];
+    
     pro.value =  currentTime / zigg.ZSC_duration;
+    
+    if([zigg loadALineIn:currentTime] != nil){
+        lyrics_line.text = [zigg loadALineIn:currentTime];
+    }
 
 }
 
